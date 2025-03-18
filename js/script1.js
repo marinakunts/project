@@ -136,11 +136,132 @@
 // console.log(++incr);
 // console.log(--decr);
 
-console.log(5 % 2);
+// console.log(5 % 2);
 
-console.log(2 + 2 * 2 !== "6");
+// console.log(2 + 2 * 2 !== "6");
 
-const isChecked = false,
-  isCLose = false;
+// const isChecked = false,
+//   isCLose = false;
 
-console.log(isChecked || !isCLose);
+// console.log(isChecked || !isCLose);
+
+//19
+// if (4 == 9) {
+//   console.log("ok!");
+// } else {
+//   console.log("error");
+// }
+
+// const num = 50;
+
+// if (num < 49) {
+//   console.log("error");
+// } else if (num > 100) {
+//   console.log("erorr2");
+// } else {
+//   console.log("ok");
+// }
+
+// (num === 50) ? console.log("ok") : console.log("error");
+// 4 + 4 binarbyj argument
+// 4 - 4 unarnyj argument
+
+// const num = 50;
+
+// switch (num) {
+//   case 49:
+//     console.log("nie ok");
+//     break;
+//   case 100:
+//     console.log("nie ok");
+//     break;
+//   case 51:
+//     console.log("ok");
+//     break;
+//   default:
+//     console.log("nie okk");
+//     break;
+// }
+
+//20
+
+// const hamburger = 5;
+// const fries = null;
+
+// if (hamburger && fries) {
+//   console.log("I'm ok");
+// }
+
+// const hamburger = 3;
+// const fries = 1;
+// const cola = 0;
+
+// console.log(hamburger === 3 && cola && fries);
+
+// console.log(1 && 0);
+// console.log(1 && 5);
+// console.log(null && 5);
+// console.log(0 && "aaaa");
+
+// if (hamburger === 3 && cola === 1 && fries) {
+//   console.log("all");
+// } else {
+//   console.log("no");
+// }
+
+// const hamburger = 3;
+// const fries = 3;
+// const cola = 0;
+// const nuggets = 2;
+
+// if ((hamburger === 3 && cola === 2) || (fries === 3 && nuggets)) {
+//   console.log("all");
+// } else {
+//   console.log("no");
+// }
+// console.log((hamburger === 3 && cola === 2) || (fries === 3 && nuggets));
+
+// // let jhnReport,
+// //   alexReport,
+// //   samReport,
+// //   mariaReport = "done";
+
+// // console.log(jhnReport || alexReport || samReport || mariaReport);
+
+// console.log(!0);
+
+console.log(NaN || 2 || undefined); //2 !!
+console.log(NaN && 2 && undefined); //NaN
+console.log(1 && 2 && 3); //3
+console.log((!1 && 2) || !3); //false
+console.log(25 || (null && !3)); //25 !!
+console.log(NaN || null || !3 || undefined || 5); //5
+console.log(NaN || (null && !3 && undefined) || 5); //false !!
+console.log((5 === 5 && 3 > 1) || 5); //true !
+
+// const hamburger = 3;
+// const fries = 3;
+// const cola = 0;
+// const nuggets = 2;
+
+// if (hamburger === 3 && cola || fries === 3 && nuggets) {
+//   console.log('Done!')
+// }
+
+// let hamburger;
+// const fries = NaN;
+// const cola = 0;
+// const nuggets = 2;
+
+// if (hamburger || cola || fries === 3 || nuggets) {
+//   console.log('Done!')
+// }
+
+let hamburger; //undefined
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+
+if ((hamburger && cola) || (fries === 3 && nuggets)) {
+  console.log("Done!");
+}
