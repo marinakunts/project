@@ -230,14 +230,14 @@
 
 // console.log(!0);
 
-console.log(NaN || 2 || undefined); //2 !!
-console.log(NaN && 2 && undefined); //NaN
-console.log(1 && 2 && 3); //3
-console.log((!1 && 2) || !3); //false
-console.log(25 || (null && !3)); //25 !!
-console.log(NaN || null || !3 || undefined || 5); //5
-console.log(NaN || (null && !3 && undefined) || 5); //false !!
-console.log((5 === 5 && 3 > 1) || 5); //true !
+// console.log(NaN || 2 || undefined); //2 !!
+// console.log(NaN && 2 && undefined); //NaN
+// console.log(1 && 2 && 3); //3
+// console.log((!1 && 2) || !3); //false
+// console.log(25 || (null && !3)); //25 !!
+// console.log(NaN || null || !3 || undefined || 5); //5
+// console.log(NaN || (null && !3 && undefined) || 5); //false !!
+// console.log((5 === 5 && 3 > 1) || 5); //true !
 
 // const hamburger = 3;
 // const fries = 3;
@@ -257,11 +257,169 @@ console.log((5 === 5 && 3 > 1) || 5); //true !
 //   console.log('Done!')
 // }
 
-let hamburger; //undefined
-const fries = NaN;
-const cola = 0;
-const nuggets = 2;
+// let hamburger; //undefined
+// const fries = NaN;
+// const cola = 0;
+// const nuggets = 2;
 
-if ((hamburger && cola) || (fries === 3 && nuggets)) {
-  console.log("Done!");
+// if ((hamburger && cola) || (fries === 3 && nuggets)) {
+//   console.log("Done!");
+// }
+
+//21
+
+// let num = 50;
+
+// while (num <= 55) {
+//   console.log(num);
+//   num++;
+// }
+
+// do {
+//   console.log(num);
+//   num++;
+// }
+// while (num < 55);
+
+for (let i = 1; i < 10; i++) {
+  if (i === 6) {
+    break;
+  }
+  console.log(i);
+}
+
+//22
+// for (let i = 0; i < 3; i++) {
+//   console.log(i);
+//   for (let j = 0; j < 3; j++) {
+//     console.log(j);
+//   }
+// }
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+
+// let result = "";
+// const length = 7;
+
+// for (let i = 1; i < length; i++) {
+//   for (let j = 0; j < i; j++) {
+//     result += "*";
+//   }
+
+//   result += "\n";
+// }
+
+// console.log(result);
+
+// first: for (let i = 0; i < 3; i++) {
+//   console.log(`First level: ${i}`);
+//   for (let j = 0; j < 3; j++) {
+//     console.log(`Second level: ${j}`);
+//     for (let k = 0; k < 4; k++) {
+//       if (k === 2) break first;
+//       console.log(`Third level: ${k}`);
+//     }
+//   }
+// }
+
+// Exercise 3
+// function firstTask() {
+// let num = 5;
+// while (num <= 10) {
+//   console.log(num);
+//   num++;
+// }
+
+// function secondTask() {
+
+// let i = 20;
+// while (i >= 10) {
+//   if (i === 13) {
+//     break;
+//   }
+//   console.log(i);
+//   i--;
+// }
+
+// function thirdTask() {
+// let i = 2;
+// for (i = 2; i <= 10; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+// }
+
+// function fourthTask() {
+// for (let i = 2; i <= 16; i++) {
+//   if (i % 2 === 0) {
+//     continue;
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+// let i = 2;
+// while (i <= 16) {
+//   if (i % 2 === 0) {
+//     i++;
+//     continue;
+//   }
+//   console.log(i);
+//   i++;
+// }
+// Место для пятой задачи
+
+// function fifthTask() {
+//   const arrayOfNumbers = [];
+//   arrayOfNumbers[0] = 5;
+//   arrayOfNumbers[1] = 6;
+//   arrayOfNumbers[2] = 7;
+//   arrayOfNumbers[3] = 8;
+//   arrayOfNumbers[4] = 9;
+//   arrayOfNumbers[5] = 10;
+
+//   return arrayOfNumbers;
+// }
+
+// Exercise 4
+
+// Заполните новый массив (result) числами из старого (arr). Количество элементов в массиве можно получить как arr.length, а к элементам обращаемся все так же: arr[0], arr[1] и тд.
+// Должен получиться точно такой же массив
+
+// function firstTask() {
+//   // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+//   const arr = [3, 5, 8, 16, 20, 23, 50];
+//   const result = [arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6]];
+
+//   // Не трогаем
+//   return result;
+// }
+
+// Место для второй задачи
+
+// Измените данный массив так, чтобы все числа были увеличены в 2 раза, а если попадается строка - то к ней было добавлено " - done".
+// Для определения типа данных используйте typeof();
+// Должно получиться: [ 10, 20, 'Shopping - done', 40, 'Homework - done' ]
+
+function secondTask() {
+  // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+  const data = [5, 10, "Shopping", 20, "Homework"];
+
+  for (i = 0; i < data.length; i++) {
+    if (typeof data[i] === "number") {
+      console.log(data[i] * 2);
+      for (j = 0; j < data.length; j++) {
+        if (typeof data[i] === "string") {
+          console.log(`"${data[i]} -done"`);
+        }
+      }
+    }
+  }
+
+  // Не трогаем
+  return data;
 }
