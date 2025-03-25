@@ -281,12 +281,12 @@
 // }
 // while (num < 55);
 
-for (let i = 1; i < 10; i++) {
-  if (i === 6) {
-    break;
-  }
-  console.log(i);
-}
+// for (let i = 1; i < 10; i++) {
+//   if (i === 6) {
+//     break;
+//   }
+//   console.log(i);
+// }
 
 //22
 // for (let i = 0; i < 3; i++) {
@@ -393,33 +393,130 @@ for (let i = 1; i < 10; i++) {
 // function firstTask() {
 //   // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
 //   const arr = [3, 5, 8, 16, 20, 23, 50];
-//   const result = [arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6]];
+//   const result = [];
 
+//   for (i = 0; i < arr.length; i++) {
+//     result[i] = arr[i];
+//   }
+//   console.log(result)
 //   // Не трогаем
 //   return result;
 // }
-
+// firstTask();
 // Место для второй задачи
 
 // Измените данный массив так, чтобы все числа были увеличены в 2 раза, а если попадается строка - то к ней было добавлено " - done".
 // Для определения типа данных используйте typeof();
 // Должно получиться: [ 10, 20, 'Shopping - done', 40, 'Homework - done' ]
 
-function secondTask() {
-  // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-  const data = [5, 10, "Shopping", 20, "Homework"];
+// function secondTask() {
+//   // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+//   const data = [5, 10, "Shopping", 20, "Homework"];
 
-  for (i = 0; i < data.length; i++) {
-    if (typeof data[i] === "number") {
-      console.log(data[i] * 2);
-      for (j = 0; j < data.length; j++) {
-        if (typeof data[i] === "string") {
-          console.log(`"${data[i]} -done"`);
-        }
-      }
-    }
-  }
+//   let i = 0;
+//   for (i = 0; i < data.length; i++) {
+//     if (typeof data[i] === "number") {
+//       data[i] = data[i] * 2;
+//     }
+//     if (typeof data[i] === "string") {
+//       data[i] = data[i] + " - done";
+//     }
+//   }
 
-  // Не трогаем
-  return data;
+//   // Не трогаем
+//   return data;
+// }
+
+// Разверните массив data наоборот при помощи цикла и запишите данные в массив result.
+// Должно получиться: [ 'Homework', 20, 'Shopping', 10, 5 ]
+
+// function thirdTask() {
+//   // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+
+//   const data = [5, 10, "Shopping", 20, "Homework"];
+//   const result = [];
+
+//   for (let i = 1; i <= data.length; i++) {
+//     result[i - 1] = data[data.length - i];
+//   }
+//   return result;
+// }
+// console.log(thirdTask());
+
+//Exercise 5
+//      *
+//     ***
+//    *****
+//   *******
+//  *********
+// ***********
+
+// const lines = 5;
+// let result = "";
+// const length = 7;
+
+// for (let i = 1; i < length; i++) {
+
+//   for (let j = 0; j < i; j++) {
+//     result += "*";
+
+//   }
+
+//   result += "\n";
+// }
+
+// console.log(result);
+
+// function doubleNumbers() {
+//   const arr = [1, 2, 3, 4, 5];
+//   const result = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === "number") {
+//       result[i] = arr[i] * 2;
+//     }
+//   }
+//   return result;
+// }
+// console.log(doubleNumbers()); // [2, 4, 6, 8, 10]
+
+//24
+
+let num = 20;
+
+function showFirstMessage(text, arg) {
+  console.log(text);
+  let num = 10;
 }
+
+showFirstMessage("hello world");
+console.log(num);
+
+// function calc(a, b) {
+//   return a + b;
+// }
+
+console.log(calc(4, 3));
+console.log(calc(5, 6));
+console.log(calc(10, 6));
+
+function ret() {
+  let num = 50;
+  return num;
+}
+const anotherNum = ret();
+console.log(anotherNum);
+
+//Function expresion
+
+const logger = function () {
+  console.log("Hello");
+};
+
+logger();
+
+//Strelocznaja funcja
+
+const calc = (a, b) => a + b;
+
+//25
