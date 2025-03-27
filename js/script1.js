@@ -482,41 +482,154 @@
 
 //24
 
-let num = 20;
+// let num = 20;
 
-function showFirstMessage(text, arg) {
-  console.log(text);
-  let num = 10;
-}
-
-showFirstMessage("hello world");
-console.log(num);
-
-// function calc(a, b) {
-//   return a + b;
+// function showFirstMessage(text, arg) {
+//   console.log(text);
+//   let num = 10;
 // }
 
-console.log(calc(4, 3));
-console.log(calc(5, 6));
-console.log(calc(10, 6));
+// showFirstMessage("hello world");
+// console.log(num);
 
-function ret() {
-  let num = 50;
-  return num;
+// // function calc(a, b) {
+// //   return a + b;
+// // }
+
+// console.log(calc(4, 3));
+// console.log(calc(5, 6));
+// console.log(calc(10, 6));
+
+// function ret() {
+//   let num = 50;
+//   return num;
+// }
+// const anotherNum = ret();
+// console.log(anotherNum);
+
+// //Function expresion
+
+// const logger = function () {
+//   console.log("Hello");
+// };
+
+// logger();
+
+// //Strelocznaja funcja
+
+// const calc = (a, b) => a + b;
+
+//25 //26
+
+const usdCurr = 28;
+const discount = 0.9;
+
+function convert(amount, curr) {
+  return curr * amount;
 }
-const anotherNum = ret();
-console.log(anotherNum);
 
-//Function expresion
+function promotion(result) {
+  console.log(result * discount);
+}
+const res = convert(500, usdCurr);
+promotion(res);
 
-const logger = function () {
-  console.log("Hello");
-};
+//26
+// function test() {
+//   for (let i = 0; i < 5; i++) {
+//     console.log(i);
+//     if (i === 3) return;
+//   }
+//   console.log("done");
+// }
 
-logger();
+// test();
 
-//Strelocznaja funcja
+// function doNothing() {}
+// console.log(doNothing() === undefined);
 
-const calc = (a, b) => a + b;
+//Exercise 6
 
-//25
+// // Место для первой задачи
+// function sayHello(name) {
+//   return `Привет, ${name}`;
+// }
+// sayHello("Антон");
+
+// // Место для второй задачи
+
+// function returnNeighboringNumbers(number) {
+//   return [number - 1, number, number + 1];
+// }
+
+// console.log(returnNeighboringNumbers(5));
+
+// Место для третьей задачи
+
+// function getMathResult(num, count) {
+//   for (let i = 0; i < count; i++) {
+//     if (typeof count === "number") {
+//       return num * count + "---";
+//     } else if (typeof count === "string") {
+//       return num * count;
+//     } else if (typeof count != "number" || arr < 0) {
+//       return num;
+//     }
+//   }
+// }
+// console.log(getMathResult(5, 3));
+// ?????
+
+//27
+
+const str = "teSt";
+const arr = [1, 2, 3];
+
+console.log(str);
+
+//Metod
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+
+const fruit = "some fruit";
+
+console.log(fruit.indexOf("Q"));
+
+const logg = "hello world";
+
+console.log(logg.slice(6, 11));
+
+console.log(logg.substring(6, 11));
+
+console.log(logg.substr(6, 11));
+
+const num = 12.2;
+console.log(Math.round(num));
+
+const test = "12.2px";
+
+console.log(parseInt(test));
+console.log(parseFloat(test));
+
+//Exercise 7
+
+// Место для первой задачи
+// function calculateVolumeAndArea() {
+
+// }
+
+//30
+
+function first() {
+  //do smth
+  setTimeout(function () {
+    console.log(1);
+  }, 500);
+}
+
+function second() {
+  console.log(2);
+}
+
+first();
+second();
