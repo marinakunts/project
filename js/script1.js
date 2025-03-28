@@ -582,34 +582,34 @@ promotion(res);
 
 //27
 
-const str = "teSt";
-const arr = [1, 2, 3];
+// const str = "teSt";
+// const arr = [1, 2, 3];
 
-console.log(str);
+// console.log(str);
 
-//Metod
-console.log(str.toUpperCase());
-console.log(str.toLowerCase());
+// //Metod
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
 
-const fruit = "some fruit";
+// const fruit = "some fruit";
 
-console.log(fruit.indexOf("Q"));
+// console.log(fruit.indexOf("Q"));
 
-const logg = "hello world";
+// const logg = "hello world";
 
-console.log(logg.slice(6, 11));
+// console.log(logg.slice(6, 11));
 
-console.log(logg.substring(6, 11));
+// console.log(logg.substring(6, 11));
 
-console.log(logg.substr(6, 11));
+// console.log(logg.substr(6, 11));
 
-const num = 12.2;
-console.log(Math.round(num));
+// const num = 12.2;
+// console.log(Math.round(num));
 
-const test = "12.2px";
+// const test = "12.2px";
 
-console.log(parseInt(test));
-console.log(parseFloat(test));
+// console.log(parseInt(test));
+// console.log(parseFloat(test));
 
 //Exercise 7
 
@@ -620,16 +620,114 @@ console.log(parseFloat(test));
 
 //30
 
-function first() {
-  //do smth
-  setTimeout(function () {
-    console.log(1);
-  }, 500);
-}
+// function first() {
+//   //do smth
+//   setTimeout(function () {
+//     console.log(1);
+//   }, 500);
+// }
 
-function second() {
-  console.log(2);
-}
+// function second() {
+//   console.log(2);
+// }
 
-first();
-second();
+// first();
+// second();
+
+// function learnJS(lang, callback) {
+//   console.log(`I learn: ${lang}`);
+//   callback();
+// }
+// function done() {
+//   console.log("I done this lesson");
+// }
+
+// learnJS("JavaScript", done);
+
+//31
+// const options = {
+//   name: "test",
+//   width: 1024,
+//   height: 1024,
+//   colors: {
+//     border: "black",
+//     bg: "red",
+//   },
+//   makeTest: function () {
+//     console.log("Test");
+//   },
+// };
+// options.makeTest();
+
+// //Destrukturizacia
+
+// const { border, bg } = options.colors;
+// console.log(border);
+
+// console.log(Object.keys(options).length);
+
+// console.log(options["colors"]["border"]);
+
+// // delete options.name;
+
+// // console.log(options);
+
+// let counter = 0;
+// for (let key in options) {
+//   if (typeof options[key] === "object") {
+//     for (let i in options[key]) {
+//       console.log(`Svoistvo ${i} imeet znaczenie ${options[key][i]}`);
+//       // counter++;
+//     }
+//   } else {
+//     console.log(`Svoistvo ${key} imeet znaczenie ${options[key]}`);
+//     counter++;
+//   }
+// }
+// console.log(counter);
+
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+
+// let sum = 0;
+
+// for (let key in salaries) {
+//   sum += salaries[key];
+// }
+// console.log(sum);
+
+//32
+const arr = [2, 0, 1, 6, 3];
+
+arr.sort(compareNum);
+console.log(arr);
+
+function compareNum(a, b) {
+  return a - b;
+}
+// arr[99] = 0;
+// console.log(arr.length);
+// arr.forEach(function (item, i, arr) {
+//   console.log(`${i}: ${item} inside array ${arr}`);
+// });
+
+// arr.pop();
+// arr.push(10);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//   console.log(value);
+// }
+
+// const str = prompt("", "");
+// const products = str.split(", ");
+// products.sort();
+// console.log(products.join("; "));
