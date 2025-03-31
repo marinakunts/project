@@ -521,18 +521,18 @@
 
 //25 //26
 
-const usdCurr = 28;
-const discount = 0.9;
+// const usdCurr = 28;
+// const discount = 0.9;
 
-function convert(amount, curr) {
-  return curr * amount;
-}
+// function convert(amount, curr) {
+//   return curr * amount;
+// }
 
-function promotion(result) {
-  console.log(result * discount);
-}
-const res = convert(500, usdCurr);
-promotion(res);
+// function promotion(result) {
+//   console.log(result * discount);
+// }
+// const res = convert(500, usdCurr);
+// promotion(res);
 
 //26
 // function test() {
@@ -645,19 +645,19 @@ promotion(res);
 // learnJS("JavaScript", done);
 
 //31
-// const options = {
-//   name: "test",
-//   width: 1024,
-//   height: 1024,
-//   colors: {
-//     border: "black",
-//     bg: "red",
-//   },
-//   makeTest: function () {
-//     console.log("Test");
-//   },
-// };
-// options.makeTest();
+const options = {
+  name: "test",
+  width: 1024,
+  height: 1024,
+  colors: {
+    border: "black",
+    bg: "red",
+  },
+  makeTest: function () {
+    console.log("Test");
+  },
+};
+options.makeTest();
 
 // //Destrukturizacia
 
@@ -672,19 +672,19 @@ promotion(res);
 
 // // console.log(options);
 
-// let counter = 0;
-// for (let key in options) {
-//   if (typeof options[key] === "object") {
-//     for (let i in options[key]) {
-//       console.log(`Svoistvo ${i} imeet znaczenie ${options[key][i]}`);
-//       // counter++;
-//     }
-//   } else {
-//     console.log(`Svoistvo ${key} imeet znaczenie ${options[key]}`);
-//     counter++;
-//   }
-// }
-// console.log(counter);
+let counter = 0;
+for (let key in options) {
+  if (typeof options[key] === "object") {
+    for (let i in options[key]) {
+      console.log(`Svoistvo ${i} imeet znaczenie ${options[key][i]}`);
+      // counter++;
+    }
+  } else {
+    console.log(`Svoistvo ${key} imeet znaczenie ${options[key]}`);
+    counter++;
+  }
+}
+console.log(counter);
 
 // let salaries = {
 //   John: 100,
@@ -700,14 +700,14 @@ promotion(res);
 // console.log(sum);
 
 //32
-const arr = [2, 0, 1, 6, 3];
+// const arr = [2, 0, 1, 6, 3];
 
-arr.sort(compareNum);
-console.log(arr);
+// arr.sort(compareNum);
+// console.log(arr);
 
-function compareNum(a, b) {
-  return a - b;
-}
+// function compareNum(a, b) {
+//   return a - b;
+// }
 // arr[99] = 0;
 // console.log(arr.length);
 // arr.forEach(function (item, i, arr) {
@@ -731,3 +731,127 @@ function compareNum(a, b) {
 // const products = str.split(", ");
 // products.sort();
 // console.log(products.join("; "));
+
+//34
+let a = 5,
+  b = a;
+
+b = b + 5;
+
+console.log(b);
+console.log(a);
+
+const obj = {
+  a: 5,
+  b: 1,
+};
+
+// const copy = obj; // ssylka
+
+// copy.a = 10;
+
+// console.log(copy);
+// console.log(obj);
+
+function copy(mainObj) {
+  let objCopy = {};
+
+  let key;
+  for (key in mainObj) {
+    objCopy[key] = mainObj[key];
+  }
+  return objCopy;
+}
+
+const numbers = {
+  a: 2,
+  b: 5,
+  c: {
+    x: 7,
+    y: 4,
+  },
+};
+
+const newNumbers = copy(numbers);
+
+newNumbers.a = 10;
+
+console.log(newNumbers);
+
+const add = {
+  d: 17,
+  e: 20,
+};
+
+const clone = Object.assign({}, add);
+
+clone.d = 20;
+// console.log(add);
+// console.log(clone)
+
+const oldArray = ["a", "b", "c"];
+const newArray = oldArray.slice();
+newArray[1] = "aaaaa";
+console.log(newArray);
+console.log(oldArray);
+
+const video = ["yt", "vimeo", "rt"],
+  blogs = ["wp", "lj", "bl"],
+  internet = [...video, ...blogs, "fb"];
+
+console.log(internet);
+
+function log(a, b, c) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+const num = [2, 5, 7];
+
+log(...num);
+
+const array = ["a", "b"];
+
+const newAarray = [...array];
+
+const q = {
+  one: 1,
+  twoo: 2,
+};
+
+const newObj = {
+  ...g,
+};
+
+//Exercise 10
+
+/* The above code defines an object named `personalPlanPeter` which contains information about a person
+named Peter. The object includes Peter's name, age, skills such as languages spoken and programming
+languages known, and his experience level in programming. */
+const personalPlanPeter = {
+  name: "Peter",
+  age: "29",
+  skills: {
+    languages: ["ru", "eng"],
+    programmingLangs: {
+      js: "20%",
+      php: "10%",
+      ruby: "30%",
+    },
+    exp: "1 month",
+  },
+};
+//Создайте метод showAgeAndLangs внутри объекта personalPlanPeter. При его вызове метод будет принимать в себя объект и возвращать строку в нужном виде.
+
+//2) Напишите функцию showProgrammingLangs, которая будет принимать в себя объект со всеми данными и возвращать строку в нужном виде.
+
+// function showProgrammingLangs(plan) {
+//   let str = "";
+//   const { programmingLangs } = plan.skills;
+//   let key;
+//   for (key in programmingLangs) {
+//     str += `"Язык ${key}  изучен на ${programmingLangs[key]}"\n`;
+//   }
+//   return str;
+// }
+// console.log(showProgrammingLangs(personalPlanPeter));
