@@ -840,7 +840,13 @@ const personalPlanPeter = {
     },
     exp: "1 month",
   },
+  showAgeAndLangs: function () {
+    console.log(`Мне ${age} и я владею языками: `);
+  },
 };
+let { name } = personalPlanPeter.name.toLowerCase();
+let { age } = personalPlanPeter.age.toLowerCase();
+personalPlanPeter.showAgeAndLangs();
 //Создайте метод showAgeAndLangs внутри объекта personalPlanPeter. При его вызове метод будет принимать в себя объект и возвращать строку в нужном виде.
 
 //2) Напишите функцию showProgrammingLangs, которая будет принимать в себя объект со всеми данными и возвращать строку в нужном виде.
@@ -855,3 +861,69 @@ const personalPlanPeter = {
 //   return str;
 // }
 // console.log(showProgrammingLangs(personalPlanPeter));
+
+//Exercise 11
+const family = ["Peter", "Ann", "Alex", "Linda"];
+
+function showFamily(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.length === "") {
+      return `Семья pusta`;
+    }
+
+    return `Семья состоит из: ${family.join(" ")}`;
+  }
+}
+
+console.log(showFamily(family));
+
+const favoriteCities = ["liSBon", "ROME", "miLan", "Dublin"];
+
+function standardizeStrings(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    return arr.join(" ").toLowerCase();
+  }
+}
+standardizeStrings(favoriteCities);
+
+//35
+let str = "some";
+let strObj = new String(str);
+
+// console.log(typeof str);
+// console.log(typeof strObj);
+
+// console.dir([1, 2, 3]);
+
+const soldier = {
+  health: 400,
+  armor: 100,
+  sayHello: function () {
+    console.log("hello");
+  },
+};
+const jonh = Object.create(soldier);
+// const jonh = {
+//   health: 100,
+// };
+
+// jonh.__proto__ = soldier;
+// Object.setPrototypeOf(jonh, soldier);
+
+// console.log(jonh.armor);
+jonh.sayHello();
+
+function firstTask() {
+  const data = [5, 10, "Shopping", 20, "Homework"];
+  const result = [];
+
+  for (let i = 0; i <= data.length; i++) {
+    result[i - 1] = data[data.length - i];
+  }
+  console.log(result);
+}
+
+function getMathResult(a, b) {
+  let x;
+  for (let i = 0; i < x; i++) {}
+}
