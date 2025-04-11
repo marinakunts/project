@@ -645,19 +645,19 @@
 // learnJS("JavaScript", done);
 
 //31
-const options = {
-  name: "test",
-  width: 1024,
-  height: 1024,
-  colors: {
-    border: "black",
-    bg: "red",
-  },
-  makeTest: function () {
-    console.log("Test");
-  },
-};
-options.makeTest();
+// const options = {
+//   name: "test",
+//   width: 1024,
+//   height: 1024,
+//   colors: {
+//     border: "black",
+//     bg: "red",
+//   },
+//   makeTest: function () {
+//     console.log("Test");
+//   },
+// };
+// options.makeTest();
 
 // //Destrukturizacia
 
@@ -672,19 +672,19 @@ options.makeTest();
 
 // // console.log(options);
 
-let counter = 0;
-for (let key in options) {
-  if (typeof options[key] === "object") {
-    for (let i in options[key]) {
-      console.log(`Svoistvo ${i} imeet znaczenie ${options[key][i]}`);
-      // counter++;
-    }
-  } else {
-    console.log(`Svoistvo ${key} imeet znaczenie ${options[key]}`);
-    counter++;
-  }
-}
-console.log(counter);
+// let counter = 0;
+// for (let key in options) {
+//   if (typeof options[key] === "object") {
+//     for (let i in options[key]) {
+//       console.log(`Svoistvo ${i} imeet znaczenie ${options[key][i]}`);
+//       // counter++;
+//     }
+//   } else {
+//     console.log(`Svoistvo ${key} imeet znaczenie ${options[key]}`);
+//     counter++;
+//   }
+// }
+// console.log(counter);
 
 // let salaries = {
 //   John: 100,
@@ -732,19 +732,19 @@ console.log(counter);
 // products.sort();
 // console.log(products.join("; "));
 
-//34
-let a = 5,
-  b = a;
+// //34
+// let a = 5,
+//   b = a;
 
-b = b + 5;
+// b = b + 5;
 
-console.log(b);
-console.log(a);
+// console.log(b);
+// console.log(a);
 
-const obj = {
-  a: 5,
-  b: 1,
-};
+// const obj = {
+//   a: 5,
+//   b: 1,
+// };
 
 // const copy = obj; // ssylka
 
@@ -753,103 +753,100 @@ const obj = {
 // console.log(copy);
 // console.log(obj);
 
-function copy(mainObj) {
-  let objCopy = {};
+// function copy(mainObj) {
+//   let objCopy = {};
 
-  let key;
-  for (key in mainObj) {
-    objCopy[key] = mainObj[key];
-  }
-  return objCopy;
-}
+//   let key;
+//   for (key in mainObj) {
+//     objCopy[key] = mainObj[key];
+//   }
+//   return objCopy;
+// }
 
-const numbers = {
-  a: 2,
-  b: 5,
-  c: {
-    x: 7,
-    y: 4,
-  },
-};
+// const numbers = {
+//   a: 2,
+//   b: 5,
+//   c: {
+//     x: 7,
+//     y: 4,
+//   },
+// };
 
-const newNumbers = copy(numbers);
+// const newNumbers = copy(numbers);
 
-newNumbers.a = 10;
+// newNumbers.a = 10;
 
-console.log(newNumbers);
+// console.log(newNumbers);
 
-const add = {
-  d: 17,
-  e: 20,
-};
+// const add = {
+//   d: 17,
+//   e: 20,
+// };
 
-const clone = Object.assign({}, add);
+// const clone = Object.assign({}, add);
 
-clone.d = 20;
-// console.log(add);
-// console.log(clone)
+// clone.d = 20;
+// // console.log(add);
+// // console.log(clone)
 
-const oldArray = ["a", "b", "c"];
-const newArray = oldArray.slice();
-newArray[1] = "aaaaa";
-console.log(newArray);
-console.log(oldArray);
+// const oldArray = ["a", "b", "c"];
+// const newArray = oldArray.slice();
+// newArray[1] = "aaaaa";
+// console.log(newArray);
+// console.log(oldArray);
 
-const video = ["yt", "vimeo", "rt"],
-  blogs = ["wp", "lj", "bl"],
-  internet = [...video, ...blogs, "fb"];
+// const video = ["yt", "vimeo", "rt"],
+//   blogs = ["wp", "lj", "bl"],
+//   internet = [...video, ...blogs, "fb"];
 
-console.log(internet);
+// console.log(internet);
 
-function log(a, b, c) {
-  console.log(a);
-  console.log(b);
-  console.log(c);
-}
-const num = [2, 5, 7];
+// function log(a, b, c) {
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
+// const num = [2, 5, 7];
 
-log(...num);
+// log(...num);
 
-const array = ["a", "b"];
+// const array = ["a", "b"];
 
-const newAarray = [...array];
+// const newAarray = [...array];
 
-const q = {
-  one: 1,
-  twoo: 2,
-};
+// const q = {
+//   one: 1,
+//   twoo: 2,
+// };
 
-const newObj = {
-  ...g,
-};
+// const newObj = {
+//   ...g,
+// };
 
 //Exercise 10
 
-/* The above code defines an object named `personalPlanPeter` which contains information about a person
-named Peter. The object includes Peter's name, age, skills such as languages spoken and programming
-languages known, and his experience level in programming. */
-const personalPlanPeter = {
-  name: "Peter",
-  age: "29",
-  skills: {
-    languages: ["ru", "eng"],
-    programmingLangs: {
-      js: "20%",
-      php: "10%",
-      ruby: "30%",
-    },
-    exp: "1 month",
-  },
-  showAgeAndLangs: function () {
-    console.log(`Мне ${age} и я владею языками: `);
-  },
-};
-let { name } = personalPlanPeter.name.toLowerCase();
-let { age } = personalPlanPeter.age.toLowerCase();
-personalPlanPeter.showAgeAndLangs();
+// const personalPlanPeter = {
+//   name: "Peter",
+//   age: "29",
+//   skills: {
+//     languages: ["ru", "eng"],
+//     programmingLangs: {
+//       js: "20%",
+//       php: "10%",
+//       ruby: "30%",
+//     },
+//     exp: "1 month",
+//   },
+//   showAgeAndLangs: function () {
+//     console.log(`Мне ${age} и я владею языками: `);
+//   },
+// };
+// let { name } = personalPlanPeter.name.toLowerCase();
+// let { age } = personalPlanPeter.age.toLowerCase();
+// personalPlanPeter.showAgeAndLangs();
 //Создайте метод showAgeAndLangs внутри объекта personalPlanPeter. При его вызове метод будет принимать в себя объект и возвращать строку в нужном виде.
 
-//2) Напишите функцию showProgrammingLangs, которая будет принимать в себя объект со всеми данными и возвращать строку в нужном виде.
+// 2) Напишите функцию showProgrammingLangs, которая будет принимать в себя объект со всеми данными и возвращать строку в нужном виде.
 
 // function showProgrammingLangs(plan) {
 //   let str = "";
@@ -863,67 +860,257 @@ personalPlanPeter.showAgeAndLangs();
 // console.log(showProgrammingLangs(personalPlanPeter));
 
 //Exercise 11
-const family = ["Peter", "Ann", "Alex", "Linda"];
+// const family = ["Peter", "Ann", "Alex", "Linda"];
 
-function showFamily(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr.length === "") {
-      return `Семья pusta`;
-    }
+// function showFamily(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr.length === "") {
+//       return `Семья pusta`;
+//     }
 
-    return `Семья состоит из: ${family.join(" ")}`;
-  }
-}
+//     return `Семья состоит из: ${family.join(" ")}`;
+//   }
+// }
 
-console.log(showFamily(family));
+// console.log(showFamily(family));
 
-const favoriteCities = ["liSBon", "ROME", "miLan", "Dublin"];
+// const favoriteCities = ["liSBon", "ROME", "miLan", "Dublin"];
 
-function standardizeStrings(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    return arr.join(" ").toLowerCase();
-  }
-}
-standardizeStrings(favoriteCities);
+// function standardizeStrings(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     return arr.join(" ").toLowerCase();
+//   }
+// }
+// standardizeStrings(favoriteCities);
 
 //35
-let str = "some";
-let strObj = new String(str);
+// let str = "some";
+// let strObj = new String(str);
 
 // console.log(typeof str);
 // console.log(typeof strObj);
 
 // console.dir([1, 2, 3]);
 
-const soldier = {
-  health: 400,
-  armor: 100,
-  sayHello: function () {
-    console.log("hello");
-  },
-};
-const jonh = Object.create(soldier);
-// const jonh = {
-//   health: 100,
+// const soldier = {
+//   health: 400,
+//   armor: 100,
+//   sayHello: function () {
+//     console.log("hello");
+//   },
+// };
+// const jonh = Object.create(soldier);
+// // const jonh = {
+// //   health: 100,
+// // };
+
+// // jonh.__proto__ = soldier;
+// // Object.setPrototypeOf(jonh, soldier);
+
+// // console.log(jonh.armor);
+// jonh.sayHello();
+
+//38
+
+//To string
+
+//1)
+// console.log(typeof String(4));
+// console.log(String(4));
+
+// //2)
+
+// console.log(typeof (5 + ""));
+
+// const num = 5;
+// console.log("https://vk.com/catalog/" + num);
+
+// const fontSize = 26 + "px";
+
+// console.log(fontSize);
+
+// // To number
+
+// //1)
+// console.log(typeof Number("4"));
+
+// //2)
+// console.log(typeof +"5");
+
+// //3)
+// console.log(typeof parseInt("15px", 10));
+
+// let answ = +prompt("hello", "");
+
+// //To boolean
+
+// //1)
+// // 0, '', null, undefined, NaN; - false;
+
+// let switcher = null;
+
+// if (switcher) {
+//   console.log("working...");
+// }
+
+// switcher = 1;
+// if (switcher) {
+//   console.log("working...");
+// }
+
+// //2)
+// console.log(typeof Boolean("4"));
+
+// //3)
+// console.log(typeof !!"4444");
+
+//39
+
+// let number = 5;
+// debugger;
+
+// function logNumber() {
+//   console.log(number);
+//   debugger;
+// }
+// number = 6;
+// logNumber();
+// debugger;
+// number = 8;
+// logNumber();
+// debugger;
+
+// function createCounter() {
+//   let counter = 0;
+//   const myFunction = function () {
+//     counter++;
+//     return counter;
+//   };
+//   return myFunction;
+// }
+// const increment = createCounter();
+// const c1 = increment();
+// const c2 = increment();
+// const c3 = increment();
+
+// console.log(c1, c2, c3);
+
+// for (let i = 0; i < 9; i++) {
+//   for (let j = 0; j < 9; j++) {
+//     let num = 3;
+//   }
+//   console.log(num);
+// }
+
+// function foo(a, b) {
+//   const [first] = a;
+//   const { eng } = b;
+
+//   return `${first} ${eng}`;
+// }
+
+// const result = foo(["Hello", "Привет"], { ru: "Мир", eng: "World" });
+// console.log(result);
+
+// for (let i = 1; i < 5; i++) {
+//   console.log(i + 1);
+// }
+
+//40
+
+// let x = 5;
+// console.log(x++); //5
+
+// console.log([] + false - null + true); //NaN
+
+// let y = 1;
+// let x = (y = 2);
+// alert(x); //2
+
+// console.log([] + 1 + 2); //12
+
+// alert("1"[0]); //1
+
+// console.log(2 && 1 && null && 0 && undefined); // null
+
+// console.log(!!(1 && 2) === (1 && 2)); //false
+
+// alert(null || (2 && 3) || 4); //3
+
+// const a = [1, 2, 3];
+// const b = [1, 2, 3];
+// console.log(a == b); //false
+
+// alert(+"Infinity"); // Infinity
+
+// console.log(0 || "" || 2 || undefined || true || false); //2
+
+// Exersice 15
+
+// const restorantData = {
+//   menu: [
+//     {
+//       name: "Salad Caesar",
+//       price: "14$",
+//     },
+//     {
+//       name: "Pizza Diavola",
+//       price: "9$",
+//     },
+//     {
+//       name: "Beefsteak",
+//       price: "17$",
+//     },
+//     {
+//       name: "Napoleon",
+//       price: "7$",
+//     },
+//   ],
+//   waitors: [
+//     { name: "Alice", age: 22 },
+//     { name: "Mike", age: 32 },
+//   ],
+//   averageLunchPrice: "20$",
+//   openNow: true,
 // };
 
-// jonh.__proto__ = soldier;
-// Object.setPrototypeOf(jonh, soldier);
+// function isOpen(prop) {
+//   let answer = "";
 
-// console.log(jonh.armor);
-jonh.sayHello();
+//   prop ? (answer = "Открыто") : (answer = "Закрыто");
 
-function firstTask() {
-  const data = [5, 10, "Shopping", 20, "Homework"];
-  const result = [];
+//   return answer;
+// }
 
-  for (let i = 0; i <= data.length; i++) {
-    result[i - 1] = data[data.length - i];
-  }
-  console.log(result);
-}
+// console.log(isOpen(restorantData.openNow));
 
-function getMathResult(a, b) {
-  let x;
-  for (let i = 0; i < x; i++) {}
-}
+// function isAverageLunchPriceTrue(fDish, sDish, average) {
+//   if (
+//     +fDish.price.slice(0, -1) + +sDish.price.slice(0, -1) <
+//     +average.slice(0, -1)
+//   ) {
+//     return "Цена ниже средней";
+//   } else {
+//     return "Цена выше средней";
+//   }
+// }
+
+// console.log(
+//   isAverageLunchPriceTrue(
+//     restorantData.menu[0],
+//     restorantData.menu[1],
+//     restorantData.averageLunchPrice
+//   )
+// );
+
+// function transferWaitors(data) {
+//   const copy = Object.assign({}, data);
+
+//   copy.waitors = [{ name: "Mike", age: 32 }];
+
+//   return copy;
+// }
+
+// transferWaitors(restorantData);
+
+//44
